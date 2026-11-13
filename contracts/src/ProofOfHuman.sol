@@ -30,11 +30,12 @@ contract ProofOfHuman is SelfVerificationRoot {
      * @notice Constructor for the test contract
      * @param identityVerificationHubV2Address The address of the Identity Verification Hub V2
      * @param scopeSeed The scope seed that is used to create the scope of the contract
-     * @param _verificationConfig The verification configuration that will be used to process the proof in the VerificationHub
+     * @param _verificationConfig The verification configuration that will be used to process the proof in the
+     * VerificationHub
      */
     constructor(
         address identityVerificationHubV2Address,
-        string memory scopeSeed, 
+        string memory scopeSeed,
         SelfUtils.UnformattedVerificationConfigV2 memory _verificationConfig
     )
         SelfVerificationRoot(identityVerificationHubV2Address, scopeSeed)

@@ -18,19 +18,18 @@ contract DeployProofOfHuman is BaseScript {
     /// @dev Requires the following environment variables:
     ///      - IDENTITY_VERIFICATION_HUB_ADDRESS: Address of the Self Protocol verification hub
     ///      - SCOPE_SEED: Scope seed value (defaults to "self-workshop")
-    ///      - VERIFICATION_CONFIG: Verification configuration that will be used to process the proof in the VerificationHub
+    ///      - VERIFICATION_CONFIG: Verification configuration that will be used to process the proof in the
+    /// VerificationHub
 
     function run() public broadcast returns (ProofOfHuman proofOfHuman) {
         address hubAddress = vm.envAddress("IDENTITY_VERIFICATION_HUB_ADDRESS");
         string memory scopeSeed = vm.envString("SCOPE_SEED");
         string[] memory forbiddenCountries = new string[](1);
-        
+
         // Make sure this is the same as frontend config
         forbiddenCountries[0] = CountryCodes.UNITED_STATES;
         SelfUtils.UnformattedVerificationConfigV2 memory verificationConfig = SelfUtils.UnformattedVerificationConfigV2({
-            olderThan: 18,
-            forbiddenCountries: forbiddenCountries,
-            ofacEnabled: false
+            olderThan: 18, forbiddenCountries: forbiddenCountries, ofacEnabled: false
         });
 
         // Deploy the contract using SCOPE_SEED from environment
