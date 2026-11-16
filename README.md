@@ -1,4 +1,4 @@
-# Self Protocol Boilerplate Example
+        # Self Protocol Boilerplate Example
 
 Learn to build privacy-preserving identity verification with [Self Protocol](https://self.xyz/) - from frontend QR codes to smart contract attestations on Celo.
 
