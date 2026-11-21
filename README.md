@@ -259,4 +259,4 @@ self-integration-example/
 
 ### Self App
 - [Self on iOS](https://apps.apple.com/us/app/self-zk-passport-identity/id6478563710) - iOS App
-- [Self on Android](https://play.google.com/store/apps/details?id=com.proofofpassportapp) - Android App
+- [Self on Android](https://play.google.com/store/apps/details?id=com.proofofpassportapp) - Android App 
